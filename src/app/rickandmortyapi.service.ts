@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
 })
 export class RickandmortyapiService {
 
-  constructor(private http:HttpClient) { }
+  constructor() { }
 
+  //Enviando peticiones a la api
   buscarPersonaje(consulta ='',pagina=1){
     const url = 'https://rickandmortyapi.com/api/character';
     return fetch(url).then(response => response.json())

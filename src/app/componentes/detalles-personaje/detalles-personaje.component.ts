@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { RickandmortyapiService } from './../../rickandmortyapi.service'
-import { personajes } from './../../interfaces/personaje'
 
 @Component({
   selector: 'app-detalles-personaje',

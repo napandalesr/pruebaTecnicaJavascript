@@ -6,6 +6,7 @@ import { Page404Component } from './componentes/page404/page404.component';
 
 
 const routes: Routes = [
+  //Rutas 
   { path:'detalles/:id', component:DetallesPersonajeComponent },
   { path:'', component:PersonajesComponent, pathMatch:'full' },
   { path:'nofound', component:Page404Component },

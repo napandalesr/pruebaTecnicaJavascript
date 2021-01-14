@@ -8,9 +8,6 @@ import { RickandmortyapiService } from './../../rickandmortyapi.service'
   styleUrls: ['./personajes.component.sass']
 })
 export class PersonajesComponent implements OnInit {
-  
-  scrollHeight:number=200;
-  scrollShow:number=500;
   nombre:string;
   pagina=1;
 

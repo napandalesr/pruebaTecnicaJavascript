@@ -10,7 +10,6 @@ import { DetallesPersonajeComponent } from './componentes/detalles-personaje/det
 import { Page404Component } from './componentes/page404/page404.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import {AutocompleteLibModule} from 'angular-ng-autocomplete';
 
 @NgModule({
   declarations: [
@@ -25,8 +24,7 @@ import {AutocompleteLibModule} from 'angular-ng-autocomplete';
     AppRoutingModule,
     HttpClientModule,
     NgxPaginationModule,
-    BrowserAnimationsModule,
-    AutocompleteLibModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
