@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RickandmortyapiService } from './../../rickandmortyapi.service'
-import { personajes } from './../../interfaces/personaje'
+
 
 @Component({
   selector: 'app-personajes',
@@ -8,25 +8,21 @@ import { personajes } from './../../interfaces/personaje'
   styleUrls: ['./personajes.component.sass']
 })
 export class PersonajesComponent implements OnInit {
-  personaje:personajes[]=[];
+  
   scrollHeight:number=200;
   scrollShow:number=500;
   nombre:string;
   pagina=1;
 
-  personajes:personajes[]=[]
+  personajes:Object;
   constructor(private api:RickandmortyapiService) { 
-    this.api.buscarPersonaje(this.nombre,this.pagina).subscribe((res:any)=>{
-      const { info, results } = res;
-      console.log(res.results)
-      this.personajes=res.results
-    })
+     
   }
 
   ngOnInit() {
-  }
-
-  obtenerDatos():void{
+    this.api.buscarPersonaje(this.nombre,this.pagina).then(data => {
+      this.personajes=data.results
+    });
     
   }
 

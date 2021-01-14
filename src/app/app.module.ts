@@ -8,6 +8,9 @@ import { HeaderComponent } from './header/header.component';
 import { PersonajesComponent } from './componentes/personajes/personajes.component';
 import { DetallesPersonajeComponent } from './componentes/detalles-personaje/detalles-personaje.component';
 import { Page404Component } from './componentes/page404/page404.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {AutocompleteLibModule} from 'angular-ng-autocomplete';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { Page404Component } from './componentes/page404/page404.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule,
+    BrowserAnimationsModule,
+    AutocompleteLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]
