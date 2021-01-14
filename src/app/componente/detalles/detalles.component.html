@@ -1,0 +1,30 @@
+<div class="card " *ngIf="personaje">
+    <h5 class="card-header ">{{personaje.name}}</h5>
+    <div class="card-body row">
+
+        <div class="col-md-4 text-center">
+            <img [src]="personaje.image" [alt]="personaje.name" />
+        </div>
+        <div class=col-md-8>
+            <ul>
+                <li *ngIf="personaje.species">Especie: {{personaje.species}}</li>
+                <li *ngIf="personaje.status">Estado: {{personaje.status}}</li>
+                <li *ngIf="personaje.gender">Genero: {{personaje.gender}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="card ">
+    <h5 class="card-header ">Episodios</h5>{{dataEpisodios}}
+    <div class="card-body row">
+        <div class=col-md-4 *ngFor="let episodio of dataEpisodios | paginate: { itemsPerPage: 9, currentPage: p}">
+            <li>Nombre: {{episodio.name}}</li>
+            <li>Episodio: {{episodio.episode}}</li>
+            <li>Fecha al aire: {{episodio.air_date}}</li>
+            <br>
+            <hr>
+        </div>
+
+    </div>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

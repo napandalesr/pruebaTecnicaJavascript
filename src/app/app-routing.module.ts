@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PersonajesComponent } from './componentes/personajes/personajes.component';
-import { DetallesPersonajeComponent } from './componentes/detalles-personaje/detalles-personaje.component';
-import { Page404Component } from './componentes/page404/page404.component';
+import { DetallesComponent } from './componente/detalles/detalles.component';
+import { PersonajesComponent } from './componente/personajes/personajes.component';
+import { Page404Component } from './componente/page404/page404.component';
 
 
 const routes: Routes = [
   //Rutas 
-  { path:'detalles/:id', component:DetallesPersonajeComponent },
+  { path:'detalles/:id', component:DetallesComponent },
   { path:'', component:PersonajesComponent, pathMatch:'full' },
   { path:'nofound', component:Page404Component },
   { path:'**', redirectTo:'nofound' }

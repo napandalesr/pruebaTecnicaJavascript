@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="card col-md-3" *ngFor="let personaje of personajes  | paginate: { itemsPerPage: 8, currentPage: p }">
+        <a href="#" routerLink="detalles/{{personaje.id}}" class="btn btn-primary">
+            <img class="card-img-top mg-5" [src]="personaje.image" [alt]="personaje.name">
+        </a>
+        <div class="card-body">
+            <h5 class="card-title">{{personaje.name}}</h5>
+            <a href="#" routerLink="detalles/{{personaje.id}}" class="btn btn-primary">Ver más</a>
+        </div>
+    </div>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
