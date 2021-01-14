@@ -1,0 +1,9 @@
+<p>personajes works!</p>
+<button (click)="obtenerDatos()">OBtener datos</button>
+<div class="row container">
+    <div class="card" *ngFor="let personaje of personajes">
+        <a href="#">
+            <img [src]="personaje.image" [alt]="personaje.name">
+        </a>
+    </div>
+</div>
