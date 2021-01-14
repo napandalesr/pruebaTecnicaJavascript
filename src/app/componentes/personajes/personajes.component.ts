@@ -15,17 +15,19 @@ export class PersonajesComponent implements OnInit {
   pagina=1;
 
   personajes:personajes[]=[]
-  constructor(private api:RickandmortyapiService) { }
-
-  ngOnInit() {
-  }
-
-  obtenerDatos():void{
+  constructor(private api:RickandmortyapiService) { 
     this.api.buscarPersonaje(this.nombre,this.pagina).subscribe((res:any)=>{
       const { info, results } = res;
       console.log(res.results)
       this.personajes=res.results
     })
+  }
+
+  ngOnInit() {
+  }
+
+  obtenerDatos():void{
+    
   }
 
 }

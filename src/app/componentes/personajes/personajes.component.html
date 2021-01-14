@@ -1,9 +1,9 @@
-<p>personajes works!</p>
-<button (click)="obtenerDatos()">OBtener datos</button>
-<div class="row container">
-    <div class="card" *ngFor="let personaje of personajes">
-        <a href="#">
-            <img [src]="personaje.image" [alt]="personaje.name">
-        </a>
-    </div>
+<div class="row">
+<div class="card col-md-3" *ngFor="let personaje of personajes">
+<img class="card-img-top mg-5" [src]="personaje.image" [alt]="personaje.name">
+  <div class="card-body">
+    <h5 class="card-title">{{personaje.name}}</h5>
+    <a href="#" routerLink="detalles/{{personaje.id}}" class="btn btn-primary">Ver más</a>
+  </div>
+</div>
 </div>

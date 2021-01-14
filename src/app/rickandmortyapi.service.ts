@@ -9,7 +9,7 @@ export class RickandmortyapiService {
 
   constructor(private http:HttpClient) { }
 
-  buscarPersonaje(consulta ='',pagina=1){
+  buscarPersonaje(consulta ='',pagina=2){
     return this.http.get<personajes[]>('https://rickandmortyapi.com/api/character?name='+consulta+'&page='+pagina)
   }
 
